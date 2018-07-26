@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 
 import { DrinksListsService } from './drinks-lists.service'; 
@@ -21,6 +22,7 @@ import { MocktailsComponent } from './mocktails/mocktails.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AppMaterialModule
 
   ],

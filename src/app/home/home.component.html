@@ -1,5 +1,5 @@
 
-<div *ngFor="let drinksList of drinksLists">
+<div *ngFor="let drinksList of drinksLists" routerLink="{{drinksList.view}}">
 	<h2>{{drinksList.title}}</h2>
 	<p>{{drinksList.shortDesc}}</p>
 </div>

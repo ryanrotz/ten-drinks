@@ -10,17 +10,20 @@ export class DrinksListsService {
 		{
 			id: 1,
 			title: 'Cocktails to order at ANY bar',
-			shortDesc: 'At a dive with no menu? Order smart and quick!'
+			shortDesc: 'At a dive with no menu? Order smart and quick!',
+			view: '/dive-bar'
 		},
 		{
 			id: 2,
 			title: 'Cocktails to order at a fancy bar',
-			shortDesc: 'Consider these your must try cocktails..'
+			shortDesc: 'Consider these your must try cocktails..',
+			view: 'fancy-bar'
 		},
 		{
 			id: 3,
 			title: 'Mocktails to enjoy',
-			shortDesc: 'What to order sans booze.'
+			shortDesc: 'What to order sans booze.',
+			view: '/mocktails'
 		}
 	]
 
