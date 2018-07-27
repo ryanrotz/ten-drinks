@@ -4,6 +4,6 @@ export interface RecipesModel {
 	shortDesc: string;
 	longDesc?: string;
 	image?: string;
-	ingredients?: [];
+	ingredients?: {};
 	directions?: string;
 }

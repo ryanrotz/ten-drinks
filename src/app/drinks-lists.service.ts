@@ -17,7 +17,7 @@ export class DrinksListsService {
 			id: 2,
 			title: 'Cocktails to order at a fancy bar',
 			shortDesc: 'Consider these your must try cocktails..',
-			view: 'fancy-bar'
+			view: '/fancy-bar'
 		},
 		{
 			id: 3,

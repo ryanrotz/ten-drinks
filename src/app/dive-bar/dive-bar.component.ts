@@ -7,13 +7,25 @@ import { RecipesModel } from '../recipes.model';
   templateUrl: './dive-bar.component.html',
   styleUrls: ['./dive-bar.component.css']
 })
+
 export class DiveBarComponent implements OnInit {
-	cocktails: RecipesModel[];
+	allCocktails: RecipesModel[];
+	diveBarCocktails: RecipesModel = [];
 
   constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
-  	this.cocktails = this.recipesService.cocktails;
+  	this.allCocktails = this.recipesService.cocktails;
+  	this.createDiveBarList(this.allCocktails);
+  }
+
+  createDiveBarList(cocktailsList: RecipesModel[]){
+  	for(let i = 0; i<cocktailsList.length; i++){
+  		if(cocktailsList[i].name === 'Whiskey Sour') {
+  			this.diveBarCocktails.push(cocktailsList[i]);
+  			console.log(this.diveBarCocktails);
+  		}	
+  	}
   }
 
 }

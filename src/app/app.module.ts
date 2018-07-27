@@ -4,7 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 
-import { DrinksListsService } from './drinks-lists.service'; 
+import { DrinksListsService } from './drinks-lists.service';
+import { RecipesService } from './recipes.service'; 
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +27,7 @@ import { MocktailsComponent } from './mocktails/mocktails.component';
     AppMaterialModule
 
   ],
-  providers: [DrinksListsService],
+  providers: [DrinksListsService, RecipesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
