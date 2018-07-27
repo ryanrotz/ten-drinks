@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipesService } from '../recipes.service';
+import { RecipesModel } from '../recipes.model';
 
 @Component({
   selector: 'app-dive-bar',
@@ -6,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dive-bar.component.css']
 })
 export class DiveBarComponent implements OnInit {
-  name = 'Cocktails to order at ANY bar';
-  shortDesc = 'At a dive with no menu? Order smart and quick!';
-  constructor() { }
+	cocktails: RecipesModel[];
+
+  constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
+  	this.cocktails = this.recipesService.cocktails;
   }
 
 }

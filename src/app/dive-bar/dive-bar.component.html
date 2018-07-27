@@ -1,3 +1,4 @@
-<p>
-  dive-bar works!
-</p>
+<div *ngFor="let cocktail of cocktails">
+	<h2>{{cocktail.name}}</h2>
+	<p>{{cocktail.shortDesc}}</p>
+</div>
