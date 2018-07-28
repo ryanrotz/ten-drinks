@@ -22,6 +22,7 @@ import { MocktailsComponent } from './mocktails/mocktails.component';
     MocktailsComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     AppMaterialModule

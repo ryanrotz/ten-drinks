@@ -1,15 +1,21 @@
 <mat-toolbar color="primary">
-  <button mat-mini-fab>
-    <i class="material-icons">menu</i>
-  </button>
+  <button mat-mini-fab (click)="sidenav.toggle()"><i class="material-icons">menu</i></button>
   <span routerLink="/">{{title}}</span>
-  <button mat-mini-fab>
-    <i class="material-icons">info</i>
-  </button>
+  <button mat-mini-fab><i class="material-icons">info</i></button>
 </mat-toolbar>
 
-<!-- <app-home>
-</app-home> -->
+<mat-sidenav-container>
+	<mat-sidenav #sidenav>
+		<nav>
+			<a *ngFor="let drinksList of drinksLists" routerLink="{{drinksList.view}}">
+				{{drinksList.title}}
+			</a>
+		</nav>
+	</mat-sidenav>
 
-<!-- routed views show up here. https://angular.io/guide/router#router-outlet -->
-<router-outlet></router-outlet>
+	<mat-sidenav-content>
+		<!-- routed views show up here. https://angular.io/guide/router#router-outlet -->
+		<router-outlet></router-outlet>
+	</mat-sidenav-content>
+</mat-sidenav-container>
+
