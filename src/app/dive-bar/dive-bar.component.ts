@@ -10,7 +10,8 @@ import { RecipesModel } from '../recipes.model';
 
 export class DiveBarComponent implements OnInit {
 	allCocktails: RecipesModel[];
-	diveBarCocktails: RecipesModel = [];
+	diveBarCocktails: RecipesModel[] = [];
+	idsOfDrinks: Array<number> = [1, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   constructor(private recipesService: RecipesService) { }
 
@@ -21,9 +22,10 @@ export class DiveBarComponent implements OnInit {
 
   createDiveBarList(cocktailsList: RecipesModel[]){
   	for(let i = 0; i<cocktailsList.length; i++){
-  		if(cocktailsList[i].name === 'Whiskey Sour') {
-  			this.diveBarCocktails.push(cocktailsList[i]);
-  			console.log(this.diveBarCocktails);
+		for(let j = 0; j<this.idsOfDrinks.length; j++){
+  			if (cocktailsList[i].id === this.idsOfDrinks[j]){
+  				this.diveBarCocktails.push(cocktailsList[i]);
+  			}
   		}	
   	}
   }
