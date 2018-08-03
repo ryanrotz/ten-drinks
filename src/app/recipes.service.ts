@@ -126,8 +126,8 @@ export class RecipesService {
 		},
 		{
 			id: 14,
-			name: 'Caipirinha  (Kai-pur-reen-yah)',
-			shortDesc: '(Kai-pur-reen-yah) Cachaca, lime, sugar. A cross between a margarita and mojito'
+			name: 'Caipirinha',
+			shortDesc: 'Cachaca, lime, sugar. A cross between a margarita and mojito. Pronounced \'Kai-pur-reen-yah\''
 			// longDesc: string,
 			// image: string,
 			// ingredients: [];

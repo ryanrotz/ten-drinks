@@ -1,3 +1,4 @@
-<p>
-  fancy-bar works!
-</p>
+<div *ngFor="let cocktail of fancyCocktails">
+	<h2>{{cocktail.name}}</h2>
+	<p>{{cocktail.shortDesc}}</p>
+</div>
