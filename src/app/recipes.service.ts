@@ -198,8 +198,19 @@ export class RecipesService {
 		},
 	]
 
-
   constructor() { }
+
+  // An array of cocktail ids is passed in
+  // Returns an array of cocktail objects
+  createDrinkList(drinkIds){
+  	var requestedCocktails = [];
+  	for(let i=0; i<this.cocktails.length; i++){
+  		if(drinkIds.includes(this.cocktails[i].id)){
+  			requestedCocktails.push(this.cocktails[i])
+  		}
+  	}
+  	return requestedCocktails;
+  }
 }
 
 
