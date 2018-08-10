@@ -203,12 +203,17 @@ export class RecipesService {
   // An array of cocktail ids is passed in
   // Returns an array of cocktail objects
   createDrinkList(drinkIds){
-  	var requestedCocktails = [];
-  	for(let i=0; i<this.cocktails.length; i++){
-  		if(drinkIds.includes(this.cocktails[i].id)){
-  			requestedCocktails.push(this.cocktails[i])
-  		}
-  	}
+  	// var requestedCocktails = [];
+  	// for(let i=0; i<this.cocktails.length; i++){
+  	// 	if(drinkIds.includes(this.cocktails[i].id)){
+  	// 		requestedCocktails.push(this.cocktails[i])
+  	// 	}
+  	// }
+
+  	var requestedCocktails = this.cocktails.filter(cocktail => {
+  		return drinkIds.indexOf(cocktail.id) !== -1
+  	})
+
   	return requestedCocktails;
   }
 }

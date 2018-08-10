@@ -1,6 +1,21 @@
 
-<div *ngFor="let drinksList of drinksLists" routerLink="{{drinksList.view}}">
-	<h2>{{drinksList.title}}</h2>
-	<p>{{drinksList.shortDesc}}</p>
-	<button>clicky clicky</button>
-</div>
+<mat-card *ngFor="let drinksList of drinksLists" routerLink="{{drinksList.view}}">
+
+	<mat-card-header>
+		<mat-card-title><h2>{{drinksList.title}}</h2></mat-card-title>
+	</mat-card-header>
+
+	<mat-card-content>
+		<img mat-card-image src="{{drinksList.image}}">
+
+		<p>{{drinksList.shortDesc}}</p>
+	</mat-card-content>
+
+
+	<mat-card-actions>
+		<button>clicky clicky</button>
+	</mat-card-actions>
+	
+
+
+</mat-card>
