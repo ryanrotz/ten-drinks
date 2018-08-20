@@ -1,0 +1,27 @@
+/*.home-ctn{
+
+}*/
+.home-cards-ctn{
+	
+	margin: 20px 15px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+mat-card {
+	/*width: 270px;*/
+    height: fit-content;
+    margin: 23px;
+    border-radius: 4px;
+    min-height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: orange;
+}
+
+.mat-card-content {
+	font-size: 8rem;
+    color: white;
+    padding: 2rem;
+}

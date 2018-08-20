@@ -3,10 +3,6 @@
 /*@import '~https://fonts.googleapis.com/icon?family=Material+Icons';*/
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
   font-family: Roboto, sans-serif;

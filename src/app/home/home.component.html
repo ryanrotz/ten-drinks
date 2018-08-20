@@ -1,21 +1,25 @@
+<div class="home-ctn">
 
-<mat-card *ngFor="let drinksList of drinksLists" routerLink="{{drinksList.view}}">
+	<div class="home-cards-ctn">
+		<mat-card *ngFor="let drinksList of drinksLists" routerLink="{{drinksList.view}}" class="mat-card">
 
-	<mat-card-header>
-		<mat-card-title><h2>{{drinksList.title}}</h2></mat-card-title>
-	</mat-card-header>
+<!-- 			<mat-card-header>
+				<mat-card-title><h2>{{drinksList.title}}</h2></mat-card-title>
+			</mat-card-header>
 
-	<mat-card-content>
-		<img mat-card-image src="{{drinksList.image}}">
+			<mat-card-content>
+				<img mat-card-image src="{{drinksList.image}}">
 
-		<p>{{drinksList.shortDesc}}</p>
-	</mat-card-content>
+				<p>{{drinksList.shortDesc}}</p>
+			</mat-card-content>
 
+			<mat-card-actions>
+				<button>clicky clicky</button>
+			</mat-card-actions> -->
 
-	<mat-card-actions>
-		<button>clicky clicky</button>
-	</mat-card-actions>
-	
+			<mat-card-content><span>{{ drinksList.title }}</span></mat-card-content>
 
+		</mat-card>
+	</div>
 
-</mat-card>
+</div>
